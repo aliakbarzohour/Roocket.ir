@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش برنامه نویسی - راکت </title>
+    <!-- linked css in bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- linked original css  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- linked vazir font  -->
+    <link href='https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css' rel='stylesheet' type='text/css'>
+    <!-- font google  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- linked font Aowesome  -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- start coding rooket.ir -->
+    <div class="header">
+
+        <!-- -------  start coding header web ---------  -->
+        <div class="container">
+            <div class="links">
+                <!-- links top web  -->
+                <div class="social">
+                    <a href="#">سوالات متداول</a>
+                    <a href="#">ارتباط با ما</a>
+                </div>
+                <div class="about">
+                    <a href="#">همکاری با ما</a>
+                    <a href="#">درباره راکت </a>
+                    <a href="#">کانال تلگرام </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- coding search box and logo svg and manu  -->
+
+        <div class="container mt-3 head">
+            <div class="row d-flex flex-row-reverse">
+                <!-- logo rooket  -->
+                <a href="#" class="col-sm-6 col-md-4"><svg class="roocket-logo w-10/12 sm:w-full" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222.1986 40"><defs><style>.cls-1{fill:#c6023a;}.cls-2{fill:#2b2b2b;}</style></defs><title>roocket</title><path class="cls-1" d="M78.3423,28.5637A13.5913,13.5913,0,1,0,91.9336,42.155,13.607,13.607,0,0,0,78.3423,28.5637m0,20.3866a6.7957,6.7957,0,1,1,6.7953-6.7953A6.8023,6.8023,0,0,1,78.3423,48.95" transform="translate(-2.8218 -20)"></path><path class="cls-1" d="M47.3806,28.5637A13.5913,13.5913,0,1,0,60.9719,42.155,13.607,13.607,0,0,0,47.3806,28.5637m0,20.3866a6.7957,6.7957,0,1,1,6.7952-6.7953A6.8024,6.8024,0,0,1,47.3806,48.95" transform="translate(-2.8218 -20)"></path><path class="cls-1" d="M95.7164,41.702v.4531a13.6065,13.6065,0,0,0,13.5913,13.5913h10.1932V48.95H109.3077a6.8029,6.8029,0,0,1-6.7961-6.7952V41.702a6.8036,6.8036,0,0,1,6.7961-6.7961h10.1932V28.1107H109.3077A13.6064,13.6064,0,0,0,95.7164,41.702" transform="translate(-2.8218 -20)"></path><polygon class="cls-1" transform="translate(0 -18)" points="195.016 26.042 195.016 32.837 205.209 32.837 205.209 53.45 212.005 53.45 212.005 32.837 222.199 32.837 222.199 26.042 195.016 26.042"></polygon><path class="cls-2" d="M197.0194,44.8307c-4.8369-.72-6.4755,1.3991-6.4755,1.3991s1.5988-1.3188,5.8758-.24a6.1727,6.1727,0,0,0,6.502-2.02c-.1388.1762-1.3726,1.5348-5.9023.861" transform="translate(-2.8218 -20)"></path><path class="cls-2" d="M196.433,37.9457a4.5931,4.5931,0,0,0-4.9165.7424c3.1539-.65,7.8848.4641,4.9165-.7424" transform="translate(-2.8218 -20)"></path><path class="cls-2" d="M194.7982,41.2374c.1139.0156.2308.03.3541.0421.1216.0109.248.0179.37.021,1.4608.039,2.7648.039,4.0687.039a9.719,9.719,0,0,0-4.7932-.1021" transform="translate(-2.8218 -20)"></path><path class="cls-2" d="M182.2147,44.1282s.1-.0273.2722-.0686c3.5157-1.3633,7.593-.91,11.2172-2.7226-3.6242.4531-6.796-.9055-9.985-1.6846-.1864-.0413-.3533-.0858-.5077-.1225-.6115-.1536-.9967-.2534-.9967-.2534a7.0267,7.0267,0,0,1,6.587-4.5991h5.4367s-2.6907-6.2875-7.9277-7.2484c-5.2417-.96-4.5445-3.4479-4.5445-3.4479l-1.7852.0819c-1.6346.0733-3.2662.1724-4.8969.2808s-3.2624.2269-4.8923.3766l-.4446.04-.1809.2184c-.8337,1.0185-1.6947,2.016-2.51,3.058-.7074.8781-1.4046,1.7664-2.0792,2.668a24.9493,24.9493,0,0,0-4.5539-1.9755s-14.7783-4.0087-30.3443,6.0263v-6.42H123.284v27.16h6.7952V49.08c15.566,10.035,30.3443,6.0263,30.3443,6.0263a25.9074,25.9074,0,0,0,4.5445-1.9669l4.7745,5.9342.4493.0414c1.63.1536,3.2615.2721,4.8923.38l2.4465.1505c.8158.0538,1.6354.0951,2.45.131l1.79.0811s.7924-2.8762,5.269-4.3393,7.1985-6.7415,7.1985-6.7961h-5.4367a7.0218,7.0218,0,0,1-6.587-4.5936m-5.9935,2.0254c.1091,1.4093.2721,2.8131.4757,4.2084.2223,1.396.471,2.7865.797,4.1592.0773.3345.1545.666.2317.9967.1037.4258.2035.8516.308,1.2728-.1676.0085-.3353.0179-.503.0273l-2.4465.1489c-1.5357.1045-3.076.2137-4.6124.3533l-5.5045-5.55a16.4333,16.4333,0,0,1-2.413.9187,25.9116,25.9116,0,0,1-2.583.5912,26.4452,26.4452,0,0,1-5.3782.4125c-.4757-.0093-.8516-.0273-1.3141-.0733l-1.3407-.1217c-.8789-.1364-1.7532-.2628-2.6142-.471a25.8709,25.8709,0,0,1-4.9874-1.69,26.6991,26.6991,0,0,1-4.4985-2.668,23.9871,23.9871,0,0,1-3.8511-3.5111,26.28,26.28,0,0,1-2.4645-3.24,26.2716,26.2716,0,0,1,2.4645-3.2389,23.95,23.95,0,0,1,3.8511-3.5111,26.7566,26.7566,0,0,1,4.4985-2.6688,25.923,25.923,0,0,1,4.9874-1.6893c.861-.2082,1.7353-.3353,2.6142-.471l1.3407-.1233c.4625-.0491.8384-.0631,1.3141-.0717a26.5018,26.5018,0,0,1,5.3782.4118,25.95,25.95,0,0,1,3.4027.8423,10.0487,10.0487,0,0,1,1.5933.6793l5.5045-5.5709c1.5364.14,3.0767.2488,4.6124.3533.9834.0632,1.9708.1264,2.9542.181q-.1029.4141-.2043.8423c-.1131.4718-.2223.9514-.3354,1.4319-.326,1.3726-.5755,2.7585-.797,4.1537a58.5721,58.5721,0,0,0-.6388,8.4494c.018,1.414.0538,2.8271.1584,4.2364" transform="translate(-2.8218 -20)"></path><path class="cls-1" d="M19.81,28.3368H2.8218v27.41H9.617V48.7242H19.81a3.4016,3.4016,0,0,1,3.398,3.3972v3.625h6.7953v-3.625A10.149,10.149,0,0,0,27.4,45.3261,10.1868,10.1868,0,0,0,19.81,28.3368m0,13.5913H9.617V35.1329H19.81a3.3976,3.3976,0,1,1,0,6.7952" transform="translate(-2.8218 -20)"></path></svg></a>
+                <!-- menu icon  in mobile -->
+                <i class="fa fa-bars"></i>
+                <!-- search box  -->
+                <form action="search" class="col-md-5 col-lg-6 col-xl-6">
+                    <input type="text" placeholder="دنبال چی میگردی ؟" class="in pr-12 outline-none w-full bg-gray-100 border border-solid border-gray-200">
+                    <i class="fas fa-search w-6 h-6 text-gray-500 hover:text-gray-600"></i>
+                </form>
+                <!-- buttons  -->
+                <div class="d-grid gap-2 w-auto buttons d-flex flex-row-reverse p-0">
+                    <button class="btn btn-primary h-auto" type="button">عضویت</button>
+                    <button class="btn btn-light btn-outline-secondary" type="button">ورود</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid p-0 menu">
+            <!-- menu  -->
+            <!-- search box  -->
+            <form action="search" class="col-md-5 col-lg-6 col-xl-6">
+                <input type="text" placeholder="دنبال چی میگردی ؟" class="in pr-12 outline-none w-full bg-gray-100 border border-solid border-gray-200">
+                <i class="fas fa-search w-6 h-6 text-gray-500 hover:text-gray-600"></i>
+            </form>
+            <div class="container">
+                <ul class="d-flex text-center">
+                    <li>صفحه اصلی </li>
+                    <li>دوره های آموزشی</li>
+                    <li>مقالات</li>
+                    <li>راکت کست</li>
+                    <li>رزومه ساز</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- end coding header web  -->
+
+    <div class="main">
+        <!-- start coding main web  -->
+        <div class="container-fluid" style="background-color: #e2e8f0;">
+            <div class="container">
+                <div class="cards">
+                    <!-- title  -->
+                    <div class="title">
+                        <a href="#" class="new">جدید ترین دوره ها</a>
+                        <a href="#" class="all">مشاهده همه دوره ها </a>
+                    </div>
+                    <!-- cards  -->
+                    <div class="row row-cols-1 row-cols-md-2 g-4 p-2 w-100">
+                        <!-- start php-8 -->
+                        <div class="col col-md-12 col-lg-6 col-xl-3">
+                            <div class="card p-3">
+                                <div class="box-image-before">
+                                    <!-- icon bell-on  -->
+                                    <i class="fas fa-bell b-l"></i>
+                                    <!-- icon stars -->
+                                    <i class="fa fa-star s-t" aria-hidden="true"></i>
+                                    <!-- image top card  -->
+                                    <img src="media/cards/php-8.jpg" class="card-img-top" alt="php-8">
+                                    <!-- span fulling record  -->
+                                    <span class="fulling-record">تکمیل ضبط</span>
+
+                                </div>
+
+                                <!-- item body card  -->
+                                <div class="card-body">
+                                    <!-- titr  -->
+                                    <h5 class="card-title">آموزش php ۸</h5>
+                                    <!-- info  -->
+                                    <p class="card-text">در دوره آموزش php ۸ سعی کرده‌ایم شما را با تغییرات و ویژگی‌های جدید php ۸ به شکل کامل و کاربردی آشنا کنیم تا بتواین در پروژهای خود از php ۸ استفاده کن...</p>
+                                </div>
+                                <!-- vip client  -->
+                                <div class="vip">
+                                    <span> دسترسی رایگان برای اعضای ویژه</span>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <!-- start coding footer cards  -->
+                                <div class="footer-card">
+                                    <div class="footer-item">
+                                        <!-- like and time box  -->
+                                        <div class="like-time">
+                                            <!-- time  -->
+                                            <div class="time">
+                                                <i class="far fa-clock"></i>
+                                                <span>۰۱:۵۲:۲۷</span>
+                                            </div>
+                                            <!-- like -->
+                                            <div class="like">
+                                                <i class="far fa-heart"></i>
+                                                <span>۶۷</span>
+                                            </div>
+                                        </div>
+                                        <!-- price  -->
+                                        <span class="price font-bold text-tiny">۸۹,۰۰۰ تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- start Mysql -->
+
+                        <div class="col col-md-12 col-lg-6 col-xl-3">
+                            <div class="card p-3">
+                                <div class="box-image-before">
+                                    <!-- icon bell-on  -->
+                                    <i class="fas fa-bell b-l"></i>
+                                    <!-- icon stars -->
+                                    <i class="fa fa-star s-t" aria-hidden="true"></i>
+                                    <!-- image top card  -->
+                                    <img src="media/cards/mysq-cover-1.jpg" class="card-img-top" alt="Mysql">
+                                    <!-- span fulling record  -->
+                                    <span class="fulling-record">تکمیل ضبط</span>
+
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">آموزش mysql</h5>
+                                    <p class="card-text">در دوره آموزش mysql از سطح مقدماتی تا پیشرفته کار با پایگاه داده mysql را به شما آموزش می‌دهیم تا شما بتوانید به سادگی با آن کار کنید</p>
+                                </div>
+                                <!-- vip client  -->
+                                <div class="vip" style="margin: 30px 12px 15px 0">
+                                    <span> دسترسی رایگان برای اعضای ویژه</span>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <!-- start coding footer cards  -->
+                                <div class="footer-card">
+                                    <div class="footer-item">
+                                        <!-- like and time box  -->
+                                        <div class="like-time">
+                                            <!-- time  -->
+                                            <div class="time">
+                                                <i class="far fa-clock"></i>
+                                                <span>۰۸:۲۳:۵۶</span>
+                                            </div>
+                                            <!-- like -->
+                                            <div class="like">
+                                                <i class="far fa-heart"></i>
+                                                <span>۲۶</span>
+                                            </div>
+                                        </div>
+                                        <!-- price  -->
+                                        <span class="price font-bold text-tiny">۲۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <!-- start PHP  -->
+
+                        <div class="col col-md-12 col-lg-6 col-xl-3">
+                            <div class="card p-3">
+                                <div class="box-image-before">
+                                    <img src="media/cards/php.jpg" class="card-img-top" alt="PHP">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">آموزش PHP</h5>
+                                    <p class="card-text">در دوره آموزش php ما سعی می‌کنیم php را به شکل جامع و کاملا رایگان به شما آموزش دهیم تا با استفاده از php بتوانید سایت‌های خود را بسازید.</p>
+                                </div>
+                                <!-- vip client  -->
+                                <div class="vip"></div>
+                                <div class="footer-card">
+                                    <div class="footer-item">
+                                        <!-- like and time box  -->
+                                        <div class="like-time">
+                                            <!-- time  -->
+                                            <div class="time">
+                                                <i class="far fa-clock"></i>
+                                                <span>۰۹:۱۲:۵۲</span>
+                                            </div>
+                                            <!-- like -->
+                                            <div class="like">
+                                                <i class="far fa-heart"></i>
+                                                <span>۲۱۴</span>
+                                            </div>
+                                        </div>
+                                        <!-- price  -->
+                                        <span class="price font-bold text-tiny" style="color: green;">رایگان</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- start SASS  -->
+
+                        <div class="col col-md-12 col-lg-6 col-xl-3">
+                            <div class="card p-3">
+                                <div class="box-image-before">
+                                    <!-- icon bell-on  -->
+                                    <i class="fas fa-bell b-l"></i>
+                                    <!-- icon stars -->
+                                    <i class="fa fa-star s-t" aria-hidden="true"></i>
+                                    <!-- image top card  -->
+                                    <img src="media/cards/sass-cover-2.jpg" class="card-img-top" alt="Sass">
+                                    <!-- span fulling record  -->
+                                    <span class="fulling-record">تکمیل ضبط</span>
+
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">آموزش کامل sass</h5>
+                                    <p class="card-text">در دوره آموزش sass ما قصد داریم کار با این زبان پیش پردازنده را که به css قابلیت‌های پیشرفته‌تری می‌دهد به شکل جامع و کامل به شما آموزش دهیم.</p>
+                                </div>
+                                <!-- vip client  -->
+                                <div class="vip" style="margin: 5px 12px 15px 0">
+                                    <span> دسترسی رایگان برای اعضای ویژه</span>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <!-- start coding footer cards  -->
+                                <div class="footer-card">
+                                    <div class="footer-item">
+                                        <!-- like and time box  -->
+                                        <div class="like-time">
+                                            <!-- time  -->
+                                            <div class="time">
+                                                <i class="far fa-clock"></i>
+                                                <span>۰۳:۰۸:۲۴</span>
+                                            </div>
+                                            <!-- like -->
+                                            <div class="like">
+                                                <i class="far fa-heart"></i>
+                                                <span>۱۴۹</span>
+                                            </div>
+                                        </div>
+                                        <!-- price  -->
+                                        <span class="price font-bold text-tiny">۷۹,۰۰۰ تومان</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="background: #475569;height: 100%;">
+            <div class="container">
+                <div class="tow-box-cards">
+                    <div class="title">
+                        <a href="#">گام های یادگیری</a>
+                    </div>
+                    <div class="color-cards">
+                        <!-- color cards  -->
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col col-md-12 col-lg-6 col-xl-3">
+                                <!-- red  -->
+                                <div class="card">
+                                    <div class="card-body py-5 px-4 pattern-2 red">
+                                        <span class="t-info">شامل ۹ دوره</span>
+                                        <h5 class="card-title">یادگیری لاراول</h5>
+                                        <p class="card-text">کار کردن بدون داشتن یک چهارچوب ممکن است هم سخت و هم زمان‌ بر باشد. به همین دلیل افرادی که در رابطه با PHP حرفه‌ای هستند...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- yellow -->
+                            <div class="col col-md-12 col-lg-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body py-5 px-4 yellow">
+                                        <span class="t-info">شامل ۷ دوره</span>
+
+                                        <h5 class="card-title">یادگیری جاوا اسکریپت</h5>
+                                        <p class="card-text">جاوااسکریپت یکی از زبان‌های بسیار قدرتمند است که هر روز در حال پیشرفت و تکامل است، تکامل و پیشرفت جاوااسکریپت را می‌توان... </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- blue  -->
+                            <div class="col col-md-12 col-lg-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body py-5 px-4 blue">
+                                        <span class="t-info">شامل ۷ دوره</span>
+                                        <h5 class="card-title">یادگیری php</h5>
+                                        <p class="card-text">بیشتر از ۵۰‌ درصد وبسایت‌های امروزی با استفاده از زبان برنامه‌نویسی PHP ساخته می‌شوند. کار با PHP آسان است و در عملکرد،... </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- green  -->
+                            <div class="col col-md-12 col-lg-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body py-5 px-4 green">
+                                        <span class="t-info">شامل ۹ دوره</span>
+
+                                        <h5 class="card-title">یادگیری طراحی وب</h5>
+                                        <p class="card-text">آموزش طراحی وب یکی از مسائل پر مخاطب روزهای ایران و جهان است که در طی دوره گام یادگیری طراحی وب سعی کرده‌ایم قدم به قدم...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <span class="end-info">به دنبال گام‌ یادگیری دیگری هستید‌؟ <span class="link-to-outer">وارد گام‌های یادگیری راکت شوید</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start coding card  -->
+        <div class="container-fluid" style="background: #f2f7ff;height: 100%;">
+            <div class="container px-0">
+                <div class="articles">
+                    <!-- title  -->
+                    <div class="title">
+                        <a href="#" class="new">آخرین مقالات</a>
+                        <a href="#" class="all">مشاهده همه مقالات </a>
+                    </div>
+
+
+                    <div class="row row-cols-1 row-cols-md-2 g-7 px-0">
+                        <!-- start coding cols -->
+
+
+                        <div class="col ">
+                            <div class="card typing">
+                                <div class="card-body typing-card-body">
+                                    <h3 class="card-title">نوشتن راهی برای گسترش ایده‌ها</h3>
+                                    <p class="card-text">نوشتن کار جالبیه که از هزاران سال همراه ما بوده و کمک کرده تا همیشه به روز باشیم، ما در راکت فضای رو به شکلی آماده کردیم تا شما بتونید ایده‌ها و مطالب جالب حوزه برنامه‌نویسی رو در اختیار هزاران برنامه‌نویس عضو راکت
+                                        قرار بدید.
+                                    </p>
+                                    <div class="buttons">
+                                        <a href="#" class="creat-new-account">ساخت اکانت جدید </a>
+                                        <a href="#" class="login">ورود به سایت</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col col-md-3 col-lg-3">
+                            <div class="card">
+
+                                <div class="box-image">
+                                    <!-- save icon -->
+                                    <i class="far fa-bookmark"></i>
+                                    <!-- image in box  -->
+                                    <img src="media/flex cards/2.jpg" class="card-img-top" alt="...">
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="/articles/how-i-easily-code-for-8-hours-without-feeling-tired-my-productivity-system">۵ پروژه جاوا اسکریپت که باید به عنوان یک توسعه دهنده فرانت اند آن‌ها را بسازید</a></h5>
+                                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                                    <div class="flex flex-wrap tags">
+                                        <a href="#"> <i class="fa fa-hashtag"></i>جاوا_اسکریپت </a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>فرانت_اند</a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>توسعه_دهنده</a>
+                                    </div>
+                                </div>
+                                <!-- footer card  -->
+                                <div class="footer-card">
+                                    <i class="fa fa-comment-dots"> 
+                                        ۲ </i>
+                                    <i class="fa fa-heart"> 
+                                        ۳ </i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col col-md-3 col-lg-3">
+                            <div class="card">
+                                <div class="box-image">
+                                    <!-- save icon -->
+                                    <i class="far fa-bookmark"></i>
+                                    <!-- image in box  -->
+                                    <img src="media/flex cards/3.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="/articles/new-year-discount">تخفیف عیدانه راکت</a></h5>
+                                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p> -->
+                                    <div class="flex flex-wrap tags">
+                                        <a href="#"> <i class="fa fa-hashtag"></i>تخفیـف </a>
+
+                                    </div>
+                                </div>
+                                <!-- footer card  -->
+                                <div class="footer-card">
+                                    <i class="fa fa-comment-dots"> 
+                                        ۵۲ </i>
+                                    <i class="fa fa-heart"> 
+                                        ۴۱ </i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col col-md-3 col-lg-3">
+                            <div class="card">
+                                <div class="box-image">
+                                    <!-- save icon -->
+                                    <i class="far fa-bookmark"></i>
+                                    <!-- image in box  -->
+                                    <img src="media/flex cards/4.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="/articles/how-i-easily-code-for-8-hours-without-feeling-tired-my-productivity-system">چگونه به راحتی و بدون احساس خستگی ۸ ساعت کد نویسی می‌کنم</a></h5>
+                                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                                    <div class="flex flex-wrap tags">
+                                        <a href="#"> <i class="fa fa-hashtag"></i>کد_نویسی </a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>بهره_وری</a>
+                                    </div>
+                                </div>
+                                <!-- footer card  -->
+                                <div class="footer-card">
+                                    <i class="fa fa-comment-dots"> 
+                                        ۲ </i>
+                                    <i class="fa fa-heart"> 
+                                        ۵۲ </i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col col-md-3 col-lg-3">
+                            <div class="card">
+                                <div class="box-image">
+                                    <!-- save icon -->
+                                    <i class="far fa-bookmark"></i>
+                                    <!-- image in box  -->
+                                    <img src="media/flex cards/5.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="/articles/how-i-easily-code-for-8-hours-without-feeling-tired-my-productivity-system">۷ نکته اصلی برای بهبود طراحی UX</a></h5>
+                                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                                    <div class="flex flex-wrap tags">
+                                        <a href="#"> <i class="fa fa-hashtag"></i>تجربه_کاربری </a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>طراحی</a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>ux</a>
+                                    </div>
+                                </div>
+                                <!-- footer card  -->
+                                <div class="footer-card">
+                                    <i class="fa fa-comment-dots"> 
+                                        ۲ </i>
+                                    <i class="fa fa-heart"> 
+                                        ۲ </i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col col-md-3 col-lg-3">
+                            <div class="card">
+                                <div class="box-image">
+                                    <!-- save icon -->
+                                    <i class="far fa-bookmark"></i>
+                                    <!-- image in box  -->
+                                    <img src="media/flex cards/6.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="/articles/how-i-easily-code-for-8-hours-without-feeling-tired-my-productivity-system">۱۲ اشتباهی که توسعه دهندگان وب جدید مرتکب می‌شوند</a></h5>
+                                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                                    <div class="flex flex-wrap tags">
+                                        <a href="#"> <i class="fa fa-hashtag"></i>توسعه_دهندگان</a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>اشتباهات_توسعه_دهندگان</a>
+
+                                    </div>
+                                </div>
+                                <!-- footer card  -->
+                                <div class="footer-card">
+                                    <i class="fa fa-comment-dots"> 
+                                        ۰ </i>
+                                    <i class="fa fa-heart"> 
+                                        ۵ </i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col col-md-3 col-lg-3">
+                            <div class="card">
+                                <div class="box-image">
+                                    <!-- save icon -->
+                                    <i class="far fa-bookmark"></i>
+                                    <!-- image in box  -->
+                                    <img src="media/flex cards/7.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="/articles/how-i-easily-code-for-8-hours-without-feeling-tired-my-productivity-system">۵ ابزار فوق‌العاده مربوط به توسعه فرانت اند که باید از آن‌ها مطلع باشید</a></h5>
+                                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                                    <div class="flex flex-wrap tags">
+                                        <a href="#"> <i class="fa fa-hashtag"></i>فرانت_اند</a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>fronend</a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>ابزار</a>
+                                        <a href="#"> <i class="fa fa-hashtag"></i>ابزار_طراحی</a>
+
+                                    </div>
+                                </div>
+                                <!-- footer card  -->
+                                <div class="footer-card">
+                                    <i class="fa fa-comment-dots"> 
+                                        ۳ </i>
+                                    <i class="fa fa-heart"> 
+                                        ۵ </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- start coding insta cards  -->
+        <div class="insta_box container-fluid py-5">
+            <div class="container">
+                <div class="title">
+                    <h2>پست های اینستاگرامی ما</h2>
+                    <p>آخرین پست‌های که در صفحه اینستاگرامی ما ارسال شده</p>
+                </div>
+                <div class="insta">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col col-xl-3 col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="top-card">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <div class="page">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                </div>
+                                <img src="media/insta-cards/1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div class="shared">
+                                        <!-- save -->
+                                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+
+                                        <div class="like-comment">
+                                            <!-- like -->
+                                            <i class="fa fa-heart" style="color: #eb1717;"></i>
+                                            <!-- comment  -->
+                                            <i class="fa fa-comment"></i>
+                                            <!-- share  -->
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                    </div>
+                                    <div class="like">
+                                        <h5><b>۳۰۳</b> لایک</h5>
+                                    </div>
+                                    <div class="card-title">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                    <!-- description  -->
+                                    <p class="card-text my-xl-1">. بی انگیزگی در کار ها . #راکت_کست 🚀 . #برنامه_نویسی #برنامه_نویس #آموزش_برنامه_نویسی #توسعه_دهنده</p>
+                                    <div class="footer-card my-lg-2 mt-lg-1 mt-xl-5 mb-xl-0">
+                                        <!-- seen users  -->
+                                        <span class="seen">مشاهده ۱۵ نظر</span>
+                                        <!-- * day  -->
+                                        <span class="day">۲ روز پیش</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="top-card">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <div class="page">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                </div>
+                                <img src="media/insta-cards/2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div class="shared">
+                                        <!-- save -->
+                                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                        <div class="like-comment">
+                                            <!-- like -->
+                                            <i class="fa fa-heart" style="color: #eb1717;"></i>
+                                            <!-- comment  -->
+                                            <i class="fa fa-comment"></i>
+                                            <!-- share  -->
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                    </div>
+                                    <div class="like">
+                                        <h5><b>۳۰۳</b> لایک</h5>
+                                    </div>
+                                    <div class="card-title">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                    <!-- description  -->
+                                    <p class="card-text" style="direction: rtl;">. مزایای فریمورک django . مزایای جنگو (Django) پکیج اهراز هویت (Authentication) پنل ادمین پیشفرض و بسیار ماژولار پکیج Sessions برای مدیریت Session ها...</p>
+
+                                    <div class="footer-card my-lg-2 m-xl-0">
+                                        <!-- seen users  -->
+                                        <span class="seen">مشاهده ۷ نظر</span>
+                                        <!-- * day  -->
+                                        <span class="day">۱۹ ساعت پیش</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="top-card">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <div class="page">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                </div>
+                                <img src="media/insta-cards/3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div class="shared">
+                                        <!-- save -->
+                                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                                        <div class="like-comment">
+                                            <!-- like -->
+                                            <i class="fa fa-heart" style="color: #eb1717;"></i>
+                                            <!-- comment  -->
+                                            <i class="fa fa-comment"></i>
+                                            <!-- share  -->
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                    </div>
+                                    <div class="like">
+                                        <h5><b>۳۰۳</b> لایک</h5>
+                                    </div>
+                                    <div class="card-title">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                    <!-- description  -->
+                                    <p class="card-text">. کد نویسی همه چیز نیست! . خیلی مهم است که بتوانید با استفاده از توانایی های خود و دانش‌ کد نویسی‌تان، کارفرما را تحت تاثیر قرار دهید اما آنها صرفاً ب...</p>
+                                    <div class="footer-card mb-xl-1 mt-xl-3">
+                                        <!-- seen users  -->
+                                        <span class="seen">مشاهده ۲۱ نظر</span>
+                                        <!-- * day  -->
+                                        <span class="day">۲ روز پیش</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="top-card">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <div class="page">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                </div>
+                                <img src="media/insta-cards/4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div class="shared">
+                                        <!-- save -->
+                                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+
+                                        <div class="like-comment">
+                                            <!-- like -->
+                                            <i class="fa fa-heart" style="color: #eb1717;"></i>
+                                            <!-- comment  -->
+                                            <i class="fa fa-comment"></i>
+                                            <!-- share  -->
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                    </div>
+                                    <div class="like">
+                                        <h5><b>۳۰۳</b> لایک</h5>
+                                    </div>
+                                    <div class="card-title">
+                                        <!-- this is a page address  -->
+                                        <img src="media/insta-cards/roocket-insta-logo.jpg" alt="">
+                                        <a href="">roocketir</a>
+                                    </div>
+                                    <!-- description  -->
+                                    <p class="card-text">. اداب ارتباطات برای برنامه نویسان موفق . گیک(Geek) های کلیشه ای همیشه در روابط انسانی آدم های ترسناکی هستند، اما اگر شما فردی هستید که از توانایی خوب...</p>
+                                    <div class="footer-card my-xl-0">
+                                        <!-- seen users  -->
+                                        <span class="seen">مشاهده ۱۹ نظر</span>
+                                        <!-- * day  -->
+                                        <span class="day">۲ روز پیش</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end coding instagram cards  -->
+                <!-- link to original instagram pages  -->
+                <div class="text-white">
+                    <p>برای مشاهده پست‌های بیشتر و دنبال کردن صفحه اینستاگرام راکت می‌توانید آی دی <b>roocketir</b> را در اینستاگرام سرچ نمایید یا <a href="https://www.instagram.com/roocketir">اینجا کلیک</a> کنید</p>
+                </div>
+            </div>
+        </div>
+        <!-- end coding istacards  -->
+    </div>
+    <!-- end the coding main page  -->
+    <!-- start the coding footer page  -->
+    <footer>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                        <h3>ارتباط با ما </h3>
+                        <hr>
+                        <p>شما میتوانید با استفاده از یکی از راه‌های زیر با ما ارتباط برقرار کنید</p>
+                        <i class="fa fa-envelope"><p>ایمیل :<a href="#">info@roocket.ir</a></p></i>
+                        <i class="fa fa-paper-plane"><p>ای دی تلگرام :<a href="#">roocket_support@</a></p>
+                        
+                    </i>
+                    </div>
+                    <div class="col col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                        <h3>بخش های سایت</h3>
+                        <hr>
+                        <a href="#">قوانین و مقررات</a>
+                        <a href="#">درباره راکت</a>
+                        <a href="#">ارتباط با ما</a>
+                    </div>
+                    <div class="col col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                        <h3>درباره راکت</h3>
+                        <hr>
+                        <p>راکت یکی از پرتلاش‌ترین و بروزترین وبسایت های آموزشی در سطح ایران است که همیشه تلاش کرده تا بتواند جدیدترین و بروزترین مقالات و دوره‌های آموزشی را در اختیار علاقه‌مندان ایرانی قرار دهد. تبدیل کردن برنامه نویسان ایرانی به بهترین
+                            برنامه نویسان جهان هدف ماست</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- linked javascript in bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <!-- linked jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jquery  -->
+    <script>
+        $(document).ready(function() {
+            $(".fa-bars").click(function() {
+                $(".menu").slideToggle(600);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+</html>

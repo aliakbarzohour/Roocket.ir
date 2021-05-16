@@ -1,0 +1,847 @@
+// added variables 
+$bcolor: #475569;
+// added mixins 
+@mixin btn {
+    background-color: #334155;
+    color: #fff;
+    transition: ease-in all .2s;
+    &:hover {
+        background-color: #fde047;
+        color: #334155;
+        transition: ease-in all .2s;
+    }
+}
+
+@mixin menu {
+    color: #e2e8f0;
+    &:hover {
+        color: #fff;
+    }
+}
+
+@mixin polka($size, $dot, $base, $accent) {
+    background: $base;
+    background-image: radial-gradient($accent $dot, transparent 0), radial-gradient($accent $dot, transparent 0);
+    background-size: $size $size;
+    background-position: 0 0, $size/2 $size/2;
+}
+
+@import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+@font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot?#iefix') format('embedded-opentype'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff2') format('woff2'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff') format('woff'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.woff2') format('woff2'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.woff') format('woff'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff2') format('woff2'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff') format('woff'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.eot?#iefix') format('embedded-opentype'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.woff2') format('woff2'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.woff') format('woff'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.eot?#iefix') format('embedded-opentype'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.woff2') format('woff2'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.woff') format('woff'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.eot');
+    src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.eot?#iefix') format('embedded-opentype'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.woff2') format('woff2'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.woff') format('woff'), url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Vazir;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    .header {
+        display: flex;
+        flex-direction: column;
+        .links {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 5px 20px;
+            border-bottom: 1px solid #4755691f;
+            .social {
+                display: flex;
+                a {
+                    color: $bcolor;
+                    text-decoration: none;
+                    padding: 10px;
+                    font-size: 15px;
+                }
+            }
+            .about {
+                display: flex;
+                a {
+                    color: $bcolor;
+                    text-decoration: none;
+                    padding: 10px;
+                    font-size: 15px;
+                }
+            }
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            .row {
+                position: relative;
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+                a {
+                    display: flex;
+                    width: 238.48px;
+                    margin: 0;
+                    padding: 0;
+                }
+                .fa {
+                    font-size: 35px;
+                    color: black;
+                    position: absolute;
+                    top: 6px;
+                    left: 15px;
+                    display: none;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                form {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    position: relative;
+                    .fas {
+                        color: #475569;
+                        height: 1.5rem;
+                        padding: 17px 6px 0 0;
+                        position: absolute;
+                        right: 10px;
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                    }
+                    display: flex;
+                    .in {
+                        width: 100%;
+                        border-radius: 30px;
+                        text-align: right;
+                        padding: 1rem;
+                        padding-right: 3rem;
+                    }
+                }
+                .buttons {
+                    display: flex;
+                }
+            }
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            background-color: #475569;
+            form {
+                margin: 10px 0 20px 20px;
+                padding: 0;
+                display: none;
+                position: relative;
+                .fas {
+                    color: #475569;
+                    height: 1.5rem;
+                    padding: 17px 6px 0 0;
+                    position: absolute;
+                    right: 10px;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                }
+                .in {
+                    width: 100%;
+                    border-radius: 30px;
+                    text-align: right;
+                    padding: 1rem;
+                    padding-right: 3rem;
+                }
+            }
+            .container {
+                ul {
+                    background-color: #475569;
+                    // padding: 0px 50px;
+                    margin-top: 20px;
+                    width: 100%;
+                    justify-content: flex-end;
+                    li {
+                        display: flex;
+                        padding: 0px 15px;
+                        list-style: none;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        .cards {
+            background-color: #e2e8f0;
+            .title {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px 25px 0px 25px;
+                margin: 0;
+                flex-direction: row-reverse;
+                align-items: center;
+                .all {
+                    font-size: medium;
+                    color: #334155;
+                }
+                .new {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: #334155;
+                    text-decoration: none;
+                }
+            }
+            .row {
+                margin: 0;
+                .col {
+                    .card {
+                        border-radius: 15px;
+                        height: 98%;
+                        .box-image-before {
+                            .b-l {
+                                color: #e8e8e8;
+                                position: absolute;
+                                top: 40px;
+                                left: 30px;
+                                font-size: 22px;
+                                cursor: pointer;
+                            }
+                            .s-t {
+                                color: #dabb21;
+                                position: absolute;
+                                top: 40px;
+                                left: 60px;
+                                font-size: 22px;
+                            }
+                            img {
+                                border-radius: 10px;
+                            }
+                            .fulling-record {
+                                background-color: #44495085;
+                                color: #fff;
+                                padding: 5px;
+                                border-radius: 5px;
+                                position: absolute;
+                                right: 30px;
+                                top: 35px;
+                                font-size: 12px;
+                            }
+                        }
+                        .card-body {
+                            text-align: right;
+                            direction: rtl;
+                            padding: 20px 0 0 0;
+                            .card-title {
+                                color: #334155;
+                            }
+                            .card-text {
+                                color: #707a88;
+                                font-size: .875rem;
+                            }
+                        }
+                        .vip {
+                            text-align: end;
+                            margin: 10px 12px 12px 0;
+                            span {
+                                color: red;
+                            }
+                            .fas {
+                                color: red;
+                            }
+                        }
+                        .footer-card {
+                            .footer-item {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                flex-direction: row-reverse;
+                                padding: 5px;
+                                .like-time {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    .like {
+                                        color: #475569;
+                                        font-weight: bold;
+                                        padding: 5px;
+                                        .far {
+                                            font-size: large;
+                                            &:hover {
+                                                color: red;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                    .time {
+                                        padding: 5px;
+                                        color: #475569;
+                                        font-weight: bold;
+                                        .far {
+                                            font-size: large;
+                                        }
+                                    }
+                                }
+                                .price {
+                                    // color: #26a34a;
+                                    color: #475569;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tow-box-cards {
+            background: #475569;
+            .title {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 20px 22px 0px 0;
+                a {
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 25px;
+                    display: flex;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .color-cards {
+                display: flex;
+                padding: 20px 20px 50px 20px;
+                .row {
+                    .col {
+                        .card {
+                            background: none;
+                            border: none;
+                            height: 100%;
+                            .card-body {
+                                border: none;
+                                border-radius: 15px;
+                                color: #fff;
+                                direction: rtl;
+                                .t-info {
+                                    background: #00000049;
+                                    padding: 8px;
+                                    margin: -10px 0px 20px 0;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                    display: inline-block;
+                                }
+                                .card-title {
+                                    font-size: 1.5rem;
+                                    margin-bottom: 1.5rem;
+                                    font-weight: bold;
+                                    &:hover {
+                                        text-decoration: underline;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            .red {
+                                border: none;
+                                background-color: #e8494c;
+                                background-image: linear-gradient(45deg, rgba(100, 100, 100, 0.048) 25%, transparent 0), linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.021) 0);
+                                background-position: 0 0, 15px 15px;
+                                background-size: 30px 30px;
+                            }
+                            .yellow {
+                                color: black;
+                                background-color: #eab308;
+                                background-image: radial-gradient(rgba(0, 0, 0, 0.041) 30%, transparent 0), radial-gradient(rgba(0, 0, 0, 0.027) 30%, transparent 0);
+                                background-size: 30px 30px;
+                                background-position: 0 0, 15px 15px;
+                            }
+                            .blue {
+                                background-color: #2563eb;
+                                background-image: radial-gradient(rgba(0, 0, 0, 0.041) 30%, transparent 0), radial-gradient(rgba(0, 0, 0, 0.027) 30%, transparent 0);
+                                background-size: 30px 30px;
+                                background-position: 0 0, 15px 15px;
+                            }
+                            .green {
+                                background-color: #10b981;
+                                background-image: linear-gradient(45deg, rgba(100, 100, 100, 0.048) 25%, transparent 0), linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.021) 0);
+                                background-position: 0 0, 15px 15px;
+                                background-size: 30px 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            .about {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 0px 25px 25px 0px;
+                margin: -23px 0 0 0;
+                .end-info {
+                    .link-to-outer {
+                        font-weight: bold;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .articles {
+            display: flex;
+            flex-direction: column;
+            background: #f2f7ff;
+            .title {
+                display: flex;
+                justify-content: space-between;
+                padding: 30px 25px 0px 25px;
+                margin: 0;
+                flex-direction: row-reverse;
+                align-items: center;
+                .all {
+                    font-size: medium;
+                    color: #334155;
+                }
+                .new {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: #334155;
+                    text-decoration: none;
+                }
+            }
+            .row {
+                display: flex;
+                padding: 22px;
+                margin: 0;
+                .col {
+                    padding: 10px;
+                    display: flex;
+                    .typing {
+                        display: flex;
+                        justify-content: center;
+                        border: 2px solid #cbd5e1;
+                        padding: 50px 15px;
+                        background-color: transparent;
+                        background-image: linear-gradient(45deg, rgba(100, 100, 100, 0.048) 25%, transparent 0), linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.021) 0);
+                        background-position: 0 0, 15px 15px;
+                        background-size: 30px 30px;
+                        .card-body.typing-card-body {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .card-title {
+                                padding-bottom: 15px;
+                            }
+                            .card-text {
+                                font-weight: 500;
+                                color: #707883;
+                            }
+                        }
+                        .buttons {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            a {
+                                border-radius: 5px;
+                                display: flex;
+                            }
+                            .creat-new-account {
+                                color: white;
+                                background: #64748b;
+                                text-decoration: none;
+                                padding: 7px 8px;
+                                font-weight: 500;
+                                &:hover {
+                                    background-color: darken($color: $bcolor, $amount: 5%);
+                                }
+                            }
+                            .login {
+                                margin-top: 10px;
+                                color: #64748b;
+                                text-decoration: none;
+                                padding: 7px 8px;
+                                font-weight: 500;
+                                &:hover {
+                                    background-color: #d6dee7;
+                                }
+                            }
+                        }
+                    }
+                    .card {
+                        display: flex;
+                        border-radius: 7px;
+                        .box-image {
+                            position: relative;
+                            padding: 12px;
+                            height: 192px;
+                            .far {
+                                position: absolute;
+                                font-size: 22px;
+                                top: 30px;
+                                left: 30px;
+                            }
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+                        .card-body {
+                            color: #334155;
+                            display: flex;
+                            justify-content: end;
+                            align-items: end;
+                            flex-direction: column;
+                            direction: rtl;
+                            text-align: center;
+                            .card-title {
+                                text-align: right;
+                                a {
+                                    text-decoration: none;
+                                    color: inherit;
+                                    /* line-height: 0; */
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                            .tags {
+                                margin-top: 20px;
+                                width: 100%;
+                                a {
+                                    text-decoration: none;
+                                    background: #ecf6ff;
+                                    color: #615569;
+                                    padding: 3px;
+                                    border-radius: 5px;
+                                    font-size: 13px;
+                                    margin: 2px;
+                                }
+                            }
+                        }
+                        .footer-card {
+                            display: flex;
+                            justify-content: end;
+                            padding: 15px;
+                            flex-direction: row-reverse;
+                            i {
+                                color: #475569;
+                                font-size: 18px;
+                                margin: 0 5px;
+                                font-family: 'Vazir', 'Font Awesome 5 Free';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .insta_box {
+            background: linear-gradient(90deg, #facc15, #ef4444, #ec4898);
+            .container {
+                padding: 0;
+                .title {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: right;
+                    h2 {
+                        color: white;
+                        font-weight: 700;
+                    }
+                    p {
+                        color: white;
+                    }
+                }
+                .insta {
+                    .row {
+                        .col {
+                            .card {
+                                .top-card {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    margin: 15px 15px 0px 22px;
+                                    i {
+                                        color: #505d70;
+                                        cursor: pointer;
+                                    }
+                                    .page {
+                                        cursor: pointer;
+                                        display: flex;
+                                        flex-direction: row-reverse;
+                                        align-items: center;
+                                        img {
+                                            width: 40px;
+                                            border-radius: 50%;
+                                        }
+                                        a {
+                                            text-decoration: none;
+                                            color: #4c596b;
+                                            margin-right: 8px;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                }
+                                img {}
+                                .card-body {
+                                    padding-top: 0;
+                                    cursor: pointer;
+                                    .shared {
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                        margin: 0 2px 0 2px;
+                                        i {
+                                            color: #000;
+                                            cursor: pointer;
+                                            font-size: 20px;
+                                        }
+                                        .like-comment {
+                                            display: flex;
+                                            flex-direction: row-reverse;
+                                            i {
+                                                color: #000;
+                                                font-size: 18px;
+                                                margin: 0 5px 0 5px;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                    .like {
+                                        margin: 7px 6px 0 0;
+                                        h5 {
+                                            color: rgb(82, 81, 81);
+                                            font-size: 15px;
+                                            direction: rtl;
+                                            b {
+                                                color: rgb(46, 46, 46);
+                                            }
+                                        }
+                                    }
+                                    .card-title {
+                                        direction: rtl;
+                                        margin: 0px 6px 0 0px;
+                                        img {
+                                            width: 20px;
+                                            border-radius: 50%;
+                                        }
+                                        a {
+                                            text-decoration: none;
+                                            color: #4c596b;
+                                            margin-right: 4px;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                        }
+                                    }
+                                    .card-text {
+                                        color: #656565;
+                                        text-align: right;
+                                        font-size: 14px;
+                                        margin: 5px 7px 0 0;
+                                        direction: rtl;
+                                    }
+                                    .footer-card {
+                                        margin: 5px 7px 0 0;
+                                        display: flex;
+                                        flex-direction: column;
+                                        direction: rtl;
+                                        .seen {
+                                            color: #a7a7a7;
+                                            text-align: right;
+                                            font-size: 15px;
+                                        }
+                                        .day {
+                                            font-size: 15px;
+                                            margin: 5px 0 0 0;
+                                            color: #a7a7a7;
+                                            font-weight: 500;
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .text-white {
+                    margin: 15px 0 0 0;
+                    p {
+                        direction: rtl;
+                        b {
+                            color: white;
+                            font-weight: 500;
+                            text-decoration: underline;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                        a {
+                            color: white;
+                            font-weight: 500;
+                            text-decoration: underline;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        .container-fluid {
+            background-color: #334155;
+            padding: 55px 0;
+            .container {
+                .row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .col {
+                        direction: rtl;
+                        display: flex;
+                        flex-direction: column;
+                        h3 {
+                            font-size: 20px;
+                        }
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+                        p {
+                            color: white;
+                        }
+                        i {
+                            display: flex;
+                            color: white;
+                            margin-left: 10px;
+                            p {
+                                margin-right: 5px;
+                                color: white;
+                                font-family: 'Roboto Condensed', sans-serif;
+                                a {
+                                    color: white;
+                                    font-family: 'Roboto Condensed', sans-serif;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* start responsive in media query . . . */
+
+@media screen and (max-width: 765px) {
+    body {
+        transition: linear all .5s;
+        .header {
+            transition: linear all .5s;
+            .links {
+                .social {
+                    a {
+                        font-size: 10px;
+                    }
+                }
+                .about {
+                    a {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .container {
+                margin-bottom: 30px;
+                .row {
+                    .roocket-logo {
+                        margin: 0px -40px 0px 20px;
+                    }
+                    .fa {
+                        display: block;
+                    }
+                    form {
+                        display: none;
+                    }
+                    .buttons {
+                        .btn {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .container-fluid {
+                display: none;
+            }
+            // coding the menu is mobile 
+            .menu {
+                display: none;
+                justify-content: center;
+                .roocket-logo {
+                    margin: 0 0 0 0;
+                }
+                form {
+                    display: block;
+                    margin: 20px 20px 5px 20px;
+                }
+                .container {
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        background-color: #475569;
+                        // padding: 0px 50px;
+                        li {
+                            padding: 15px 0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
